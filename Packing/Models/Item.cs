@@ -33,7 +33,7 @@ namespace Packs.Models
             return _packList[search -1];
         }
 
-        public static void Delete(int ID)
+        public static void DeleteItem(int ID)
         {
             for(int i=0; i<_packList.Count; i++)
             {

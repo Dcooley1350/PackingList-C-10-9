@@ -60,7 +60,7 @@ namespace Packs.Tests
             List<Tracking> emptyList = new List<Tracking>{};
             List<Tracking> gotAll = Tracking.GetAll();
             int id = 1;
-            Tracking.Delete(id);
+            Tracking.DeleteItem(id);
             CollectionAssert.AreEqual(gotAll, emptyList);
 
         }
