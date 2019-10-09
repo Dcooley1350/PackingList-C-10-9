@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Places.Models;
+using Packs.Models;
 using System.Collections.Generic;
 
 namespace Packs.Controllers

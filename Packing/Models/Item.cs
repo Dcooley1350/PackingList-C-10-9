@@ -10,7 +10,7 @@ namespace Packs.Models
         public int Id { get; }
         private static List<Tracking> _packList = new List<Tracking> {};
 
-        public TrackingInput(string itemName, string category)
+        public Tracking(string itemName, string category)
         {
             ItemName = itemName;
             Category = category;
@@ -28,6 +28,21 @@ namespace Packs.Models
             _packList.Clear();
         }
 
+        public static Tracking Find(int search)
+        {
+            return _packList[search -1];
+        }
+
+        public static void Delete(int ID)
+        {
+            for(int i=0; i<_packList.Count; i++)
+            {
+                if(_packList[i].Id == ID)
+                {
+                    _packList.Remove(_packList[i]);
+                }
+            }
+        }
 
     }
 }
