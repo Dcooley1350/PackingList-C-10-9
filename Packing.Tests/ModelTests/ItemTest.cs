@@ -11,14 +11,14 @@ namespace Packs.Tests
     {
         Tracking newTracking;
         string name;
-        string category;
+        string description;
 
         [TestInitialize]
         public void Setup()
         {
             name = "rope";
-            category = "tool";
-            newTracking = new Tracking(name, category);
+            description = "tool";
+            newTracking = new Tracking(name, description);
         }
 
         [TestCleanup]

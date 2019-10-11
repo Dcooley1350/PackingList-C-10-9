@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 
-namespace Packs.TestTools{
+namespace Packs.Tests
+{
     [TestClass]
     public class CategoryTest
     {
@@ -52,10 +53,25 @@ namespace Packs.TestTools{
         [TestMethod]
         public void Find_FindAnItemByID_Category()
         {
-            int idToFind = 1;
+            int idToFind = 2;
             Category testCategory = new Category(name);
             Category foundCategory = Category.Find(idToFind);
             Assert.AreEqual(foundCategory,testCategory);
+        }
+        [TestMethod]
+        public void AddItem_AssociatesItemWithCategory_ItemList()
+        {
+            string name = "Rope.";
+            string description = "Long parachute rope.";
+            Tracking newTracking = new Tracking(name,description);
+            string catName = "Tools.";
+
+            Category newCategory = new Category(catName);
+            newCategory.AddItem(newTracking);
+            int expectedNumItems = 1;
+            int numItems = newCategory.Trackings.Count;
+         
+            Assert.AreEqual(numItems,expectedNumItems);
         }
     }
 }

@@ -1,19 +1,19 @@
 using System.Collections.Generic;
-
 namespace Packs.Models
+
 {
     public class Tracking
     {
         public string ItemName { get; set; }
-        public string Category { get; set; }
+        public string Description { get; set; }
 
         public int Id { get; }
         private static List<Tracking> _packList = new List<Tracking> {};
 
-        public Tracking(string itemName, string category)
+        public Tracking(string itemName, string description)
         {
             ItemName = itemName;
-            Category = category;
+            Description = description;
             _packList.Add(this);
             Id = _packList.Count;
         }

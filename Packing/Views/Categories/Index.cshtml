@@ -1,0 +1,18 @@
+@using Packs.Models;
+<html>
+    <header>
+
+    </header>
+    <body>
+        <h1>Categories:</h1>
+        @if (@Model.Count == 0)
+        {
+            <h3>No Categories have been added yet.</h3>
+        }
+        @foreach (Category item in Model)
+        {
+            <h3><a href="/categories/@item.Id">@item.Name</a></h3>
+        }
+        <p><a href="/">Back Home</a></p>
+    </body>
+</html>

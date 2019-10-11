@@ -28,5 +28,9 @@ using System.Collections.Generic;
         {
             return _instances[iD-1];
         }
+        public void AddItem(Tracking track)
+        {
+            Trackings.Add(track);
+        }
      }
  }
